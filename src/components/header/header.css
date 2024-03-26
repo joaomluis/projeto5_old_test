@@ -1,0 +1,24 @@
+.custom-navbar {
+  background-color: rgb(202, 217, 241); /* Replace with your desired color */
+}
+
+.me-auto {
+  align-items: right;
+}
+
+@media (min-width: 1400px) {
+  .custom-navbar .container {
+    max-width: none;
+  }
+}
+
+@media (max-width: 920px) {
+    .navbar-toggler {
+      display: block !important;
+    }
+  }
+  @media (min-width: 921px) {
+    .navbar-toggler {
+      display: none !important;
+    }
+  }
