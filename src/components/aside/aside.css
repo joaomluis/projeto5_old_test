@@ -1,0 +1,31 @@
+@media (max-width: 921px) {
+  .col-auto.col-md-3.col-xl-2.px-sm-2.px-0.bg-dark {
+    display: none;
+  }
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    
+    
+  }
+  
+  .col-auto.col-md-3.col-xl-2.px-sm-2.px-0.bg-dark {
+    height: calc(94vh);
+    width: 15% !important; 
+    
+  }
+
+  .bg-dark {
+    background-color: rgb(202, 217, 241) !important; /* Replace with your desired color */
+  }
+
+  @media (max-width: 920px) {
+    .sidebar {
+      display: none;
+    }
+    .sidebar.show {
+      display: block;
+    }
+  }

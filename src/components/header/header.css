@@ -13,12 +13,28 @@
 }
 
 @media (max-width: 920px) {
-    .navbar-toggler {
+    .custom-toggler {
       display: block !important;
+      
     }
   }
   @media (min-width: 921px) {
-    .navbar-toggler {
+    .custom-toggler {
       display: none !important;
     }
   }
+
+  @media (max-width: 991px) {
+    .navbar-nav {
+      flex-direction: row !important;
+    }
+    .navbar-nav .nav-link {
+      margin-right: 10px !important; /* Adjust as needed */
+    }
+  }
+
+  .custom-navbar .container {
+    padding-left: 2;
+    padding-right: 0;
+  }
+

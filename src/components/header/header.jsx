@@ -4,10 +4,15 @@ import Navbar from "react-bootstrap/Navbar";
 import "./header.css";
 import logo from "../img/scrum_image.png";
 
-function Header() {
+function Header({showSidebar}) {
   return (
-    <Navbar className="custom-navbar" data-bs-theme="light">
+    <Navbar className="custom-navbar" data-bs-theme="light" expand="lg">
       <Container>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          className="custom-toggler"
+          onClick={showSidebar}
+        />
         <Navbar.Brand href="home">
           <img
             alt=""
@@ -18,7 +23,6 @@ function Header() {
           />{" "}
           AgileUp
         </Navbar.Brand>
-
         <Nav className="ms-auto">
           <Nav.Link href="home">Home</Nav.Link>
           <Nav.Link href="features">Features</Nav.Link>
