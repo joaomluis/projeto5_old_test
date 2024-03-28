@@ -4,21 +4,21 @@ import Navbar from "react-bootstrap/Navbar";
 import "./header.css";
 import logo from "../img/scrum_image.png";
 
-function Header({showSidebar}) {
+function Header() {
   return (
     <Navbar className="custom-navbar" data-bs-theme="light" expand="lg">
       <Container>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           className="custom-toggler"
-          onClick={showSidebar}
+          
         />
         <Navbar.Brand href="home">
           <img
             alt=""
             src={logo}
-            width="30"
-            height="30"
+            width="40"
+            height="40"
             className="d-inline-block align-top"
           />{" "}
           AgileUp
