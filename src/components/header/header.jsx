@@ -8,11 +8,7 @@ function Header() {
   return (
     <Navbar className="custom-navbar" data-bs-theme="light" expand="lg">
       <Container>
-        <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          className="custom-toggler"
-          
-        />
+      
         <Navbar.Brand href="home">
           <img
             alt=""
@@ -24,9 +20,9 @@ function Header() {
           AgileUp
         </Navbar.Brand>
         <Nav className="ms-auto">
-          <Nav.Link href="home">Home</Nav.Link>
-          <Nav.Link href="features">Features</Nav.Link>
-          <Nav.Link href="pricing">Profile</Nav.Link>
+          
+          <Nav.Link href="profile">Profile</Nav.Link>
+          <Nav.Link href="login">Logout</Nav.Link>
         </Nav>
       </Container>
     </Navbar>
