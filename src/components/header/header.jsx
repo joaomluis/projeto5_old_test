@@ -3,13 +3,16 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./header.css";
 import logo from "../img/scrum_image.png";
+import { Link } from "react-router-dom";
+import useUserStore from "../../store/useUserStore.jsx";
 
 function Header() {
+  const isLoggedIn = useUserStore((state) => state.isLoggedIn);
+
   return (
     <Navbar className="custom-navbar" data-bs-theme="light" expand="lg">
       <Container>
-      
-        <Navbar.Brand href="home">
+        <Navbar.Brand href="/">
           <img
             alt=""
             src={logo}
@@ -20,9 +23,24 @@ function Header() {
           AgileUp
         </Navbar.Brand>
         <Nav className="ms-auto">
-          
-          <Nav.Link href="profile">Profile</Nav.Link>
-          <Nav.Link href="login">Logout</Nav.Link>
+          {isLoggedIn && (
+            <>
+              <Link to="/profile" className="nav-link">
+                Profile
+              </Link>
+              <Link to="/login" className="nav-link">
+                Logout
+              </Link>
+            </>
+          )}
+
+          {!isLoggedIn && (
+            <div className="d-grid">
+              <Link to="/register" className="nav-link">
+                <button className="btn btn-primary">Sign up</button>
+              </Link>
+            </div>
+          )}
         </Nav>
       </Container>
     </Navbar>
