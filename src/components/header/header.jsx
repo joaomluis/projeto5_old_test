@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import "./header.css";
 import logo from "../img/scrum_image.png";
 import { Link } from "react-router-dom";
@@ -23,8 +24,14 @@ function Header() {
           AgileUp
         </Navbar.Brand>
         <Nav className="ms-auto">
-          {isLoggedIn && (
-            <>
+          {!isLoggedIn && (
+            <>  
+
+              <NavDropdown title={<i className="bi bi-bell"></i>} id="basic-nav-dropdown">
+                <NavDropdown.Item >User</NavDropdown.Item>
+                <NavDropdown.Item >Admin</NavDropdown.Item>  
+              </NavDropdown>
+            
               <Link to="/profile" className="nav-link">
                 Profile
               </Link>
@@ -34,7 +41,7 @@ function Header() {
             </>
           )}
 
-          {!isLoggedIn && (
+          {isLoggedIn && (
             <div className="d-grid">
               <Link to="/register" className="nav-link">
                 <button className="btn btn-primary">Sign up</button>

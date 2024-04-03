@@ -5,6 +5,7 @@ import useUserStore from "./store/useUserStore.jsx";
 import Header from "./components/header/header.jsx";
 import Sidebar from "./components/side-nav-bar/sidebar.jsx";
 import Login from "./components/login/login.jsx";
+import Table from "./components/table/table.jsx";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 
@@ -46,6 +47,7 @@ const App = () => {
             <main>
               <Routes>
                 <Route path="/" element={<Login />} />
+                <Route path="/users" element={<Table />} />
               </Routes>
             </main>
           </Col>
